@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
+ * _putstr - writes the character c to stdout
+ * @forma: The character to print
+ * @lent : counter
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
@@ -13,9 +13,9 @@ void _putstr(char *forma, int *lent)
 	int i = 0;
 	if (forma == NULL)
 	{
-		_putstr("(NULL)", lent);
+		_putstr("(null)", lent);
 	}
-	while (forma[i] && *forma)
+	while (forma[i])
 	{
 		_putchar(forma[i], lent);
 		i++;
