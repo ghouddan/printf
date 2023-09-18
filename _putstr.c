@@ -13,12 +13,14 @@ void _putstr(char *forma, int *lent)
 	int i = 0;
 
 	if (forma == NULL)
-	{
 		_putstr("(null)", lent);
-	}
-	while (forma[i])
+	else
 	{
-		_putchar(forma[i], lent);
-		i++;
+		while (forma[i])
+		{
+			_putchar(forma[i], lent);
+			i++;
+		}
 	}
 }
+
