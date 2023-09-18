@@ -43,6 +43,11 @@ int _printf(const char *forma, ...)
 	lent = 0;
 	i = 0;
 	va_start(args, forma);
+	if (forma == NULL)
+	{
+		_putstr("Error", lent);
+		return (-1);
+	}
 	while (forma[i] && *forma)
 	{
 		if (forma[i] == '%')
