@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
+#include <stdlib.h>
 /**
  * flage - Description of the function.
  * @forma : type of the varaible
@@ -45,7 +46,7 @@ int _printf(const char *forma, ...)
 	va_start(args, forma);
 	if (forma == NULL)
 	{
-		_putstr("Error", lent);
+		_putstr("Error", &lent);
 		return (-1);
 	}
 	while (forma[i] && *forma)
