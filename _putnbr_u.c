@@ -9,7 +9,6 @@
  */
 void _putnbr_u(unsigned int n, int *lent)
 {
-	
 	if (n < 10)
 		_putchar(n + '0', lent);
 	else

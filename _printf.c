@@ -21,13 +21,11 @@ void flage(va_list args, const char forma, int *lent)
 	if (forma == 'b')
 		_putb2(va_arg(args, unsigned int), lent);
 	if (forma == 'n')
-		_putchar('\n',lent);
+		_putchar('\n', lent);
 	if (forma == 'X' || forma == 'x')
 		_putXx(va_arg(args, unsigned int), forma, lent);
 	if (forma == 'u')
 		_putnbr_u(va_arg(args, int), lent);
-	/*if (forma == 'o')
-		_putb8(va_arg(args, unsigned int ), lent);*/
 }
 
 /**
@@ -41,6 +39,7 @@ int _printf(const char *format, ...)
 {
 	int lent, i;
 	va_list args;
+
 	lent = 0;
 	i = 0;
 	va_start(args, format);

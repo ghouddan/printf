@@ -11,6 +11,7 @@
 void _putstr(char *forma, int *lent)
 {
 	int i = 0;
+
 	if (forma == NULL)
 	{
 		_putstr("(null)", lent);

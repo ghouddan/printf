@@ -11,6 +11,7 @@ void _putXx(unsigned int n, char x, int *lent)
 {
 	unsigned int baseX;
 	char *base;
+
 	baseX = 16;
 	if (x == 'x')
 		base = "0123456789abcdef";
