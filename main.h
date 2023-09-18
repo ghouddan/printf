@@ -1,6 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
-int _printf(const char *format, ...);
+int _printf(const char *forma, ...);
 void _putchar(char c, int *lent);
 void _putstr(char *s, int *lent);
 void _putnbr(int n, int *lent);

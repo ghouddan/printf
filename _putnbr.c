@@ -1,10 +1,9 @@
 #include "main.h"
 #include <stdarg.h>
 /**
- * print_all - Description of the function.
- * @format : type of the varaible
- * @...: Description of the variadic arguments.
- *
+ * _putnbr - Description of the function.
+ * @n: int
+ * @lent: lent
  * Return: Description of the return value (if applicable).
  */
 void _putnbr(int n, int *lent)

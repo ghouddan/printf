@@ -2,7 +2,7 @@
 #include <stdarg.h>
 /**
  * flage - Description of the function.
- * @format : type of the varaible
+ * @forma : type of the varaible
  * @args : argument list
  * @lent : kep traque of the argument passe
  * @...: Description of the variadic arguments.
@@ -30,28 +30,28 @@ void flage(va_list args, const char forma, int *lent)
 
 /**
  * _printf - Description of the function.
- * @format : type of the varaible
+ * @forma : type of the varaible
  * @...: Description of the variadic arguments.
  *
  * Return: Description of the return value (if applicable).
  */
-int _printf(const char *format, ...)
+int _printf(const char *forma, ...)
 {
 	int lent, i;
 	va_list args;
 
 	lent = 0;
 	i = 0;
-	va_start(args, format);
-	while (format[i] && *format)
+	va_start(args, forma);
+	while (forma[i] && *forma)
 	{
-		if (format[i] == '%')
+		if (forma[i] == '%')
 		{
 			i++;
-			flage(args, format[i], &lent);
+			flage(args, forma[i], &lent);
 		}
 		else
-			_putchar(format[i], &lent);
+			_putchar(forma[i], &lent);
 		i++;
 	}
 		va_end(args);

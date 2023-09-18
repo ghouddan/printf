@@ -1,9 +1,9 @@
 #include "main.h"
 #include <stdarg.h>
 /**
- * print_all - Description of the function.
- * @format : type of the varaible
- * @...: Description of the variadic arguments.
+ * _putnbr_u - Description of the function.
+ * @n: uni
+ * @lent: lent
  *
  * Return: Description of the return value (if applicable).
  */

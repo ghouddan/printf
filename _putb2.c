@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _printf - Description of the function.
+ * _putb2 - Description of the function.
  * @nb : number to convert
  * @lent : traker of output
  * Return: Description of the return value (if applicable).

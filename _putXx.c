@@ -1,9 +1,9 @@
 #include "main.h"
 /**
  * _putXx - Description of the function.
- * @nb : number to convert;
+ * @n : number to convert;
  * @x : FF or ff
- * @...: Description of the variadic arguments.
+ * @lent: Description of the variadic arguments.
  *
  * Return: Description of the return value (if applicable).
  */
