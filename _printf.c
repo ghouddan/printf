@@ -29,6 +29,11 @@ void flage(va_list args, const char forma, int *lent)
 		_putnbr_u(va_arg(args, int), lent);
 	if (forma == 'o')
 		_putb8(va_arg(args, unsigned int), lent);
+	if (forma == 'p')
+	{
+		void *pointer = va_arg(args, void *);
+		_put_add(pointer, lent);
+	}
 }
 
 /**
