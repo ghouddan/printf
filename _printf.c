@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdarg.h>
-#include <stdlib.h>
 /**
  * flage - Description of the function.
  * @forma : type of the varaible
@@ -33,6 +32,11 @@ void flage(va_list args, const char forma, int *lent)
 		_put_add(va_arg(args, void*), lent);
 	if (forma == 'r')
 		_put_rev(va_arg(args, char *), lent);
+	else
+        {
+                _putchar('%', lent);
+                _putchar(forma, lent);
+        }
 }
 
 /**
@@ -50,7 +54,7 @@ int _printf(const char *forma, ...)
 	lent = 0;
 	i = 0;
 	va_start(args, forma);
-	if (forma == NULL)
+	if (!forma)
 		return (-1);
 	while (forma[i] && *forma)
 	{
