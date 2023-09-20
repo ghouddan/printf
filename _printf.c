@@ -34,8 +34,8 @@ static void flage(va_list args, const char forma, int *lent)
 		_put_rev(va_arg(args, char *), lent);
 	else
         {
-                _putchar('%', lent);
-                _putchar(forma, lent);
+		_putchar('%', lent);
+		_putchar(forma, lent);
         }
 }
 
@@ -61,7 +61,13 @@ int _printf(const char *forma, ...)
 		if (forma[i] == '%')
 		{
 			i++;
-			flage(args, forma[i], &lent);
+			if (forma[i])
+				flage(args, forma[i], &lent);
+			else
+			{
+				_putchar('%', &lent);
+				break;
+			}
 		}
 		else
 			_putchar(forma[i], &lent);
