@@ -8,6 +8,13 @@
  */
 void _putnbr(int n, int *lent)
 {
+	if (n == INT_MIN)
+	{
+		_putchar('-', lent);
+		_putchar('2', lent);
+		n %= 1000000000;
+		n *= -1;
+	}
 	if (n < 0)
 	{
 		_putchar('-', lent);
