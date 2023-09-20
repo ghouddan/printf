@@ -2,10 +2,9 @@
 
 /**
  * flage - Description of the function.
- * @forma : type of the varaible
  * @args : argument list
+ * @forma : type of the varaible
  * @lent : kep traque of the argument passe
- * @...: Description of the variadic arguments.
  * Return: Description of the return value (if applicable).
  */
 static void flage(va_list args, const char forma, int *lent)
@@ -34,7 +33,7 @@ static void flage(va_list args, const char forma, int *lent)
 		_put_rev(va_arg(args, char *), lent);
 	else
 	{
-		_putchar('%', lent); 
+		_putchar('%', lent);
 		_putchar(forma, lent);
 	}
 }
@@ -43,7 +42,6 @@ static void flage(va_list args, const char forma, int *lent)
  * _printf - Description of the function.
  * @forma : type of the varaible
  * @...: Description of the variadic arguments.
- *
  * Return: Description of the return value (if applicable).
  */
 int _printf(const char *forma, ...)
@@ -72,6 +70,6 @@ int _printf(const char *forma, ...)
 			_putchar(forma[i], &lent);
 		i++;
 	}
-		va_end(args);
-		return (lent);
+	va_end(args);
+	return (lent);
 }
