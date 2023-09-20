@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdarg.h>
+
 /**
  * flage - Description of the function.
  * @forma : type of the varaible
@@ -8,29 +8,29 @@
  * @...: Description of the variadic arguments.
  * Return: Description of the return value (if applicable).
  */
-void flage(va_list args, const char forma, int *lent)
+static void flage(va_list args, const char forma, int *lent)
 {
 	if (forma == 'c')
 		_putchar(va_arg(args, int), lent);
-	if (forma == 's')
+	else if (forma == 's')
 		_putstr(va_arg(args, char *), lent);
-	if (forma == '%')
+	else if (forma == '%')
 		_putchar(forma, lent);
-	if (forma == 'd' || forma == 'i')
+	else if (forma == 'd' || forma == 'i')
 		_putnbr(va_arg(args, int), lent);
-	if (forma == 'b')
+	else if (forma == 'b')
 		_putb2(va_arg(args, unsigned int), lent);
-	if (forma == 'n')
+	else if (forma == 'n')
 		_putchar('\n', lent);
-	if (forma == 'X' || forma == 'x')
+	else if (forma == 'X' || forma == 'x')
 		_putXx(va_arg(args, unsigned int), forma, lent);
-	if (forma == 'u')
+	else if (forma == 'u')
 		_putnbr_u(va_arg(args, int), lent);
-	if (forma == 'o')
+	else if (forma == 'o')
 		_putb8(va_arg(args, unsigned int), lent);
-	if (forma == 'p')
-		_put_add(va_arg(args, void*), lent);
-	if (forma == 'r')
+	else if (forma == 'p')
+		_put_add(va_arg(args, void *), lent);
+	else if (forma == 'r')
 		_put_rev(va_arg(args, char *), lent);
 	else
         {
@@ -56,7 +56,7 @@ int _printf(const char *forma, ...)
 	va_start(args, forma);
 	if (!forma)
 		return (-1);
-	while (forma[i] && *forma)
+	while (forma[i])
 	{
 		if (forma[i] == '%')
 		{
