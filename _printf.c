@@ -61,6 +61,11 @@ int _printf(const char *forma, ...)
 		if (forma[i] == '%')
 		{
 			i++;
+			if (!forma[i])
+			{
+				_putchar('%', &lent);
+				break;
+			}
 			flage(args, forma[i], &lent);
 		}
 		else
