@@ -33,11 +33,6 @@ void flage(va_list args, const char forma, int *lent)
 		_put_add(va_arg(args, void*), lent);
 	if (forma == 'r')
 		_put_rev(va_arg(args, char *), lent);
-	else
-	{
-		_putchar('%', lent);
-		_putchar(forma, lent);
-	}
 }
 
 /**
