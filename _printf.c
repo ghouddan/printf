@@ -30,9 +30,13 @@ void flage(va_list args, const char forma, int *lent)
 	if (forma == 'o')
 		_putb8(va_arg(args, unsigned int), lent);
 	if (forma == 'p')
+		_put_add(va_arg(args, void*), lent);
+	if (forma == 'r')
+		_put_rev(va_arg(args, char *), lent);
+	else
 	{
-		void *pointer = va_arg(args, void *);
-		_put_add(pointer, lent);
+		_putchar('%', lent);
+		_putchar(forma, lent);
 	}
 }
 
@@ -52,10 +56,7 @@ int _printf(const char *forma, ...)
 	i = 0;
 	va_start(args, forma);
 	if (forma == NULL)
-	{
-		_putstr("Error", &lent);
 		return (-1);
-	}
 	while (forma[i] && *forma)
 	{
 		if (forma[i] == '%')
