@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
+#include <limits.h>
 /**
  * _putnbr - Description of the function.
  * @n: int
